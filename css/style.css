@@ -1,0 +1,198 @@
+body{
+    font-family: 'Montserrat';
+}
+main{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 36px;
+    font-weight: semi-bold;
+}
+h2{
+    font-size: 28px;
+    font-weight: medium;
+}
+h3{
+    font-size: 24px;
+}
+p{
+    font-size: 16px;
+}
+button{
+    padding: 16px;
+    font-size: 16px;
+    font-weight: medium;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.5));
+    transition: 300ms;
+}
+button:hover{
+    background: lightcoral;
+}
+nav{
+    float: left;
+    background-color: blue;
+    z-index: 100000;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 0;
+    height: 100vh;
+}
+nav li{
+    margin: 24px 0;
+    padding: 0;
+}
+nav li:hover{
+    cursor: pointer;
+    color: white;
+}
+.row{
+    margin: 16px 0;
+}
+.icon{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+}
+.emoji{
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.tag{
+    display: flex;
+    flex-direction: row;
+    flex-basis: content;
+    gap: 16px;
+    background: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+.tag-icon{
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tag-name{
+    margin-right: 5px;
+}
+.mood-ranking{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.notes{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.note-card{
+    display: block;
+    background: blue;
+    width: 240px;
+    border-radius: 5px;
+    padding: 16px;
+}
+.correlation-list{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.correlation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.entry-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.past-entry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: blue;
+    border-radius: 5px;
+    padding: 16px;
+}
+.entry-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.new-entry{
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+}
+.setting{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.scheduled-reminder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+}
+
+#profile-picture{
+    text-align: center;
+    width: 96px;
+    height: 96px;
+}
+#user{
+    text-align: center;
+}
+#join-date{
+    text-align: center;
+}
+
+@media only screen and (width<640px){
+    nav{
+        float: none;
+        bottom: 0;
+        position: fixed;
+        width: 100vw;
+    }
+    nav ul{
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        margin: 0;
+    }
+    nav li{
+        height: 48px;
+        margin: 0;
+    }
+
+    .notes{
+        flex-wrap: none;
+        overflow-x: scroll;
+    }
+    .correlation-list{
+        flex-wrap: none;
+        overflow-x: scroll;
+    }
+}

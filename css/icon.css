@@ -1,0 +1,24 @@
+/*Main Icons*/
+.home{
+    background: url(../icons/home.png);
+}
+.analytics{
+    background: url(../icons/analytics.png);
+}
+.history{
+    background: url(../icons/history.png);
+}
+.account{
+    background: url(../icons/account.png);
+}
+.edit{
+    background: url(../icons/edit.png);
+}
+.plus{
+    background: url(../icons/plus.png);
+}
+
+/*Tag Icons*/
+.exercise{
+    background: url(../icons/tags/exercise.png);
+}
