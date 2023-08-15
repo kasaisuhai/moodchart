@@ -24,18 +24,13 @@ button{
     padding: 16px;
     font-size: 16px;
     font-weight: medium;
-    background: red;
     border: none;
     border-radius: 5px;
     filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.5));
     transition: 300ms;
 }
-button:hover{
-    background: lightcoral;
-}
 nav{
     float: left;
-    background-color: blue;
     z-index: 100000;
 }
 nav ul{
@@ -52,10 +47,9 @@ nav li{
 }
 nav li:hover{
     cursor: pointer;
-    color: white;
 }
 .row{
-    margin: 16px 0;
+    margin-bottom: 16px;
 }
 .icon{
     display: block;
@@ -73,8 +67,6 @@ nav li:hover{
     flex-direction: row;
     flex-basis: content;
     gap: 16px;
-    background: blue;
-    color: white;
     border-radius: 20px;
     padding: 5px;
 }
@@ -99,7 +91,6 @@ nav li:hover{
 }
 .note-card{
     display: block;
-    background: blue;
     width: 240px;
     border-radius: 5px;
     padding: 16px;
@@ -125,7 +116,6 @@ nav li:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: blue;
     border-radius: 5px;
     padding: 16px;
 }
