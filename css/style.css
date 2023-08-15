@@ -42,11 +42,17 @@ nav ul{
     height: 100vh;
 }
 nav li{
+    display: block;
+    width: 48px;
+    height: 24px;
     margin: 24px 0;
     padding: 0;
 }
 nav li:hover{
     cursor: pointer;
+}
+.container{
+    margin-top: 16px;
 }
 .row{
     margin-bottom: 16px;
@@ -146,9 +152,77 @@ nav li:hover{
     align-items: end;
     gap: 16px;
 }
+/*Theme Swatches*/
+.theme-swatch{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.light-blue{
+    background: #F8FCFF;
+}
+.dark-blue{
+    background: #2C3853;
+}
+.accent-blue{
+    background: #83A4CB;
+}
+.medium-blue{
+    background: #5175A0;
+}
+.highlight-blue{
+    background: #CCDEF2;
+}
+.light-green{
+    background: #FCFFF4;
+}
+.dark-green{
+    background: #424B26;
+}
+.accent-green{
+    background: #B0C66B;
+}
+.medium-green{
+    background: #7E933E;
+}
+.highlight-green{
+    background: #DEEEAC;
+}
+.light-orange{
+    background: #FCF2EC;
+}
+.dark-orange{
+    background: #D94F01;
+}
+.accent-orange{
+    background: #FAA475;
+}
+.medium-orange{
+    background: #DF6C2C;
+}
+.highlight-orange{
+    background: #FED8C3;
+}
+.light-purple{
+    background: #FDF6FF;
+}
+.dark-purple{
+    background: #653277;
+}
+.accent-purple{
+    background: #E7ADFC;
+}
+.medium-purple{
+    background: #9B5CB1;
+}
+.highlight-purple{
+    background: #F6DDFF;
+}
 
 #profile-picture{
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
     width: 96px;
     height: 96px;
 }
@@ -176,6 +250,21 @@ nav li:hover{
         height: 48px;
         margin: 0;
     }
+    nav li:nth-child(1){
+        order: 1;
+    }
+    nav li:nth-child(2){
+        order: 2;
+    }
+    nav li:nth-child(3){
+        order: 4;
+    }
+    nav li:nth-child(4){
+        order: 5;
+    }
+    nav li:nth-child(5){
+        order: 3;
+    }
 
     .notes{
         flex-wrap: none;
@@ -184,5 +273,9 @@ nav li:hover{
     .correlation-list{
         flex-wrap: none;
         overflow-x: scroll;
+    }
+    .new-entry{
+        position: absolute;
+        top: -24px;
     }
 }

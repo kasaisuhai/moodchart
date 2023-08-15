@@ -12,7 +12,7 @@
         
         <link rel="stylesheet" href="css/icon.css">
         <link rel="stylesheet" href="css/emoji.css">
-        <link class="theme-style blue" rel="stylesheet" href="css/theme_blue.css">
+        <link id="themeStyle" rel="stylesheet" href="css/theme_blue.css">
         <link class="mode" rel="stylesheet" href="css/light_mode.css">
         <link rel="stylesheet" href="css/style.css">
 
@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <img id="profile-picture" src="images/user.png" alt="profile-picture">
+                        <img id="profile-picture" src="images/profile-picture.png" alt="profile-picture">
                         <h1 id="user">Aubrie</h1>
                         <p id="join-date">Joined Jan. 12, 2023</p>
                     </div>
@@ -45,15 +45,14 @@
                         <div class="setting">
                             <p>Reminder Method</p>
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="reminder-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="reminderMethodDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
                                     Email
-                                    <span class="caret"></span>                                    
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="reminder-dropdown">
-                                    <li><a href="#">Email</a></li>
-                                    <li><a href="#">SMS</a></li>
-                                    <li><a href="#">Browser Notification</a></li>
-                                </ul> 
+                                <ul class="dropdown-menu" aria-labelledby="reminderMethodDropdownButton">
+                                    <li><a id="dropdownEmail" class="dropdown-item" href="#">Email</a></li>
+                                    <li><a id="dropdownSms" class="dropdown-item" href="#">SMS</a></li>
+                                    <li><a id="dropdownBrowser" class="dropdown-item" href="#">Browser</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="setting">
@@ -81,16 +80,61 @@
                         <div class="setting">
                             <p>Color Theme</p>
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="theme-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Blue
-                                    <span class="caret"></span>                                    
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="themeDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span id="selectedTheme">
+                                        <div class="theme-swatch light-blue"></div>
+                                        <div class="theme-swatch dark-blue"></div>
+                                        <div class="theme-swatch accent-blue"></div>
+                                        <div class="theme-swatch medium-blue"></div>
+                                        <div class="theme-swatch highlight-blue"></div>
+                                    </span>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="theme-dropdown">
-                                    <li><a href="#">Blue</a></li>
-                                    <li><a href="#">Green</a></li>
-                                    <li><a href="#">Orange</a></li>
-                                    <li><a href="#">Purple</a></li>
-                                </ul> 
+                                <ul class="dropdown-menu" aria-labelledby="themeDropdownButton">
+                                    <li>
+                                        <a id="blueThemeDropdownItem" class="dropdown-item" href="#">
+                                            <span>
+                                                <div class="theme-swatch light-blue"></div>
+                                                <div class="theme-swatch dark-blue"></div>
+                                                <div class="theme-swatch accent-blue"></div>
+                                                <div class="theme-swatch medium-blue"></div>
+                                                <div class="theme-swatch highlight-blue"></div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="greenThemeDropdownItem" class="dropdown-item" href="#">
+                                            <span>
+                                                <div class="theme-swatch light-green"></div>
+                                                <div class="theme-swatch dark-green"></div>
+                                                <div class="theme-swatch accent-green"></div>
+                                                <div class="theme-swatch medium-green"></div>
+                                                <div class="theme-swatch highlight-green"></div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="orangeThemeDropdownItem" class="dropdown-item" href="#">
+                                            <span>
+                                                <div class="theme-swatch light-orange"></div>
+                                                <div class="theme-swatch dark-orange"></div>
+                                                <div class="theme-swatch accent-orange"></div>
+                                                <div class="theme-swatch medium-orange"></div>
+                                                <div class="theme-swatch highlight-orange"></div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="purpleThemeDropdownItem" class="dropdown-item" href="#">
+                                            <span>
+                                                <div class="theme-swatch light-purple"></div>
+                                                <div class="theme-swatch dark-purple"></div>
+                                                <div class="theme-swatch accent-purple"></div>
+                                                <div class="theme-swatch medium-purple"></div>
+                                                <div class="theme-swatch highlight-purple"></div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
