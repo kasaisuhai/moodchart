@@ -21,6 +21,7 @@ nav li:hover{
 }
 .tag.active{
   background: #5175a0;
+  border: 1px solid #F4F4F4;
 }
 .tag.active:hover{
   background: #83A4CB;
@@ -58,22 +59,17 @@ nav li:hover{
 .btn-primary:not(:disabled):active{
   background: #CCDEF2 !important;
 }
-.custom-range:not(:disabled):not(:disabled):focus{
-  outline: none;
-}
 .custom-range::-webkit-slider-thumb{
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -7px; /* Centers thumb on the track */
-  background-color: #2c3853;
+  background-color: #5175a0;
+  outline: #F4F4F4;
   height: 1.5rem;
   width: 0.5rem;
 }
 .custom-range::-webkit-slider-thumb:active{
   background-color: #83A4CB;
-}
-.custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-check-input:checked{
   background-color: #5175a0;

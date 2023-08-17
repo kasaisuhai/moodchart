@@ -187,6 +187,17 @@ textarea{
 .dropdown-menu{
     z-index: 101;
 }
+.dropdown-item:hover{
+    cursor: pointer;
+}
+.custom-dropdown.show{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+    gap: 16px;
+    padding: 16px;
+}
 .form-check-input:hover{
     cursor: pointer;
 }
@@ -198,6 +209,7 @@ textarea{
 .mood-input{
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 }
 .range-hint{
     text-align: center;
@@ -289,11 +301,18 @@ textarea{
     flex-wrap: wrap;
     gap: 16px;
 }
+#moodSelectorDropdown{
+    text-align: center;
+}
 #sleepTimeSelector{
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
     align-items: center;
+}
+#moodIntensity{
+    display: block;
+    width: 320px;
 }
 #submitEntryButton{
     display: block;
@@ -311,6 +330,18 @@ textarea{
 }
 #joinDate{
     text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media only screen and (width<576px){

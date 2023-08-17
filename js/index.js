@@ -85,8 +85,7 @@ $(".form-check-input").on("change", function(){ //Light Mode Dark Mode Switch
     console.log("Switch On: " + switchOn);
 });
 
-//Reminder Method Selection
-$("#dropdownEmail").on("click", function(){
+$("#dropdownEmail").on("click", function(){ //Reminder Method Selection
     $("#reminderMethodDropdownButton").html("Email");
     console.log("Email Selected");
 });
@@ -99,8 +98,7 @@ $("#dropdownBrowser").on("click", function(){
     console.log("Browser Selected");
 });
 
-//Theme Selection
-$("#blueThemeDropdownItem").on("click", function(){
+$("#blueThemeDropdownItem").on("click", function(){ //Theme Selection
     setSelectedTheme("blue");
 });
 $("#greenThemeDropdownItem").on("click", function(){
@@ -113,8 +111,14 @@ $("#purpleThemeDropdownItem").on("click", function(){
     setSelectedTheme("purple");
 });
 
-//Mood Intensity Slider
-$(".form-range").on("input", function(){
+$(".custom-dropdown .dropdown-item").on("click", function(){ //Mood Selector Dropdown
+    let selectedMood = $(this).attr("class");
+    console.log("Selected Mood: " + selectedMood);
+
+    $("#selectedMood").removeClass().addClass(selectedMood).removeClass("dropdown-item");
+});
+
+$(".form-range").on("input", function(){ //Mood Intensity Slider
     console.log("Sliding");
     let range = $(this);
     let hint = range.parent(".slider-container").find(".range-hint");

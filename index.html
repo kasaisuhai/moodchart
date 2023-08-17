@@ -93,7 +93,7 @@
 
         <!--Modal Window-->
         <div id="moodEntryModal" class="modal" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-fullscreen-sm-down">
               <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">New Entry</h3>
@@ -102,14 +102,29 @@
                 <div class="modal-body">
                     <div class="mood-input">
                         <div id="moodSelector">
-                            <div id="selectedMood">
-                                <p>Current Mood</p>
-                                <div class="emoji neutral"></div>
+                            <p>Current Mood</p>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary" type="button" id="moodSelectorDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div id="selectedMood" class="emoji neutral"></div>
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown" aria-labelledby="moodSelectorDropdown">
+                                    <li class="col-3"><div class="emoji neutral dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji happy dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji disappointed dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji chillin dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji worried dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji beaming dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji sad dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji livid dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji angry dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji crying dropdown-item"></div></li>
+                                    <li class="col-3"><div class="emoji surprised dropdown-item"></div></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="slider-container" id="moodIntensity">
                             <label for="moodIntensitySlider" class="form-label">Mood Intensity</label>
-                            <div class="range-hint" id="moodIntensityValue">5</div>
+                            <div class="range-hint" id="moodIntensityValue">6</div>
                             <input type="range" class="form-range custom-range" min="1" max="10" id="moodIntensitySlider">
                         </div>
                     </div>
@@ -149,11 +164,13 @@
                     </div>
                     <div id="sleepTime">
                         <p>Sleep Time</p>
-                        <div id="sleepTimeSelector">
-                            <div class="icon minus"></div>
-                            <div id="sleepTimeInput"><h3>0</h3></div>
-                            <div class="icon plus"></div>
-                        </div>
+                        <!-- <div id="sleepTimeSelector">
+                                <div class="icon minus"></div>
+                                <div id="sleepTimeInput"><h3>0</h3></div>
+                                <div class="icon plus"></div>
+                            </div> 
+                        </div>-->
+                        <input id="sleepTimeInput" type="number" min="0" max="24" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
                     </div>
                     <div id="noteInput">
                         <div class="form-floating">
