@@ -2,3 +2,29 @@ body{
     color: #373737;
     background-color: #F4F4F4;
 }
+
+/*Main Icons*/
+.home{
+    background: url(../icons/home.png);
+}
+.analytics{
+    background: url(../icons/analytics.png);
+}
+.history{
+    background: url(../icons/history.png);
+}
+.account{
+    background: url(../icons/account.png);
+}
+.edit{
+    background: url(../icons/edit.png);
+}
+.close{
+    background: url(../icons/close.png);
+}
+.plus{
+    background: url(../icons/plus.png);
+}
+.minus{
+    background: url(../icons/minus.png);
+}

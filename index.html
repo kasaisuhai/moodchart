@@ -26,7 +26,7 @@
                 <li><a class="icon analytics" href="analytics.html"></a></li>
                 <li><a class="icon history" href="history.html"></a></li>
                 <li><a class="icon account" href="account.html"></a></li>
-                <li><button class="new-entry"><div class="icon plus"></div></button></li>
+                <li><button class="new-entry" data-bs-toggle="modal" data-bs-target="#moodEntryModal"><div class="icon plus"></div></button></li>
             </ul>
         </nav>
 
@@ -35,18 +35,25 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <h1>Your Week So Far...</h1>
-                        <div class="graph this-week">
-                            
-                        </div>
+                        <div class="graph this-week"></div>
                     </div>
                 </div>
                 <div clas="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <h1>Your Moods</h1>
-                        <div class="mood-ranking">
-                            <div class="emoji worried"></div>
-                            <div class="emoji chillin"></div>
-                            <div class="emoji neutral"></div>
+                        <div class="mood-ranking-list">
+                            <div class="mood-ranking">
+                                <div class="emoji worried"></div>
+                                <div id="moodRanking1" class="mood-ranking-bar"></div>
+                            </div>
+                            <div class="mood-ranking">
+                                <div class="emoji chillin"></div>
+                                <div id="moodRanking2" class="mood-ranking-bar"></div>
+                            </div>
+                            <div class="mood-ranking">
+                                <div class="emoji neutral"></div>
+                                <div id="moodRanking3" class="mood-ranking-bar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,34 +62,111 @@
                         <h1>Notes</h1>
                         <div class="notes">
                             <div class="note-card">
-                                <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-date">8/13/23</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                             <div class="note-card">
                                 <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                             <div class="note-card">
-                                <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-date">8/15/23</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                             <div class="note-card">
-                                <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-date">8/16/23</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                             <div class="note-card">
-                                <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-date">8/17/23</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                             <div class="note-card">
-                                <div class="note-date">8/14/23</div>
-                                <div class="note-content">Note Content</div>
+                                <div class="note-date">8/18/23</div>
+                                <div class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+
+        <!--Modal Window-->
+        <div id="moodEntryModal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">New Entry</h3>
+                    <div class="icon close" data-bs-dismiss="modal"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="mood-input">
+                        <div id="moodSelector">
+                            <div id="selectedMood">
+                                <p>Current Mood</p>
+                                <div class="emoji neutral"></div>
+                            </div>
+                        </div>
+                        <div class="slider-container" id="moodIntensity">
+                            <label for="moodIntensitySlider" class="form-label">Mood Intensity</label>
+                            <div class="range-hint" id="moodIntensityValue">5</div>
+                            <input type="range" class="form-range custom-range" min="1" max="10" id="moodIntensitySlider">
+                        </div>
+                    </div>
+                    <div class="slider-container" id="wellbeingSlider">
+                        <label for="wellbeingSlider" class="form-label">Wellbeing</label>
+                        <div class="range-hint" id="wellbeingValue">0</div>
+                        <input type="range" class="form-range custom-range" min="-5" max="5" id="wellbeingSlider">
+                    </div>
+                    <div id="tagSelector">
+                        <p>Tags</p>
+                        <div id="tagInput">
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon exercise"></div>
+                                <div class="tag-name">Exercise</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sleepTime">
+                        <p>Sleep Time</p>
+                        <div id="sleepTimeSelector">
+                            <div class="icon minus"></div>
+                            <div id="sleepTimeInput"><h3>0</h3></div>
+                            <div class="icon plus"></div>
+                        </div>
+                    </div>
+                    <div id="noteInput">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="notesTextArea" style="height: 200px"></textarea>
+                            <label for="notesTextArea">Notes</label>
+                        </div>
+                    </div>
+                    <button id="submitEntryButton">Submit Entry</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="js/index.js"></script>

@@ -67,7 +67,11 @@ function setSelectedTheme(color){
 }
 
 //Event Listeners
-$(".form-check-input").on("change", function(){
+$(".tag").on("click", function(){ //Tag Selection
+    $(this).toggleClass("active");
+});
+
+$(".form-check-input").on("change", function(){ //Light Mode Dark Mode Switch
     let switchOn = $(this).is(":checked");
 
     if(switchOn){
@@ -81,6 +85,7 @@ $(".form-check-input").on("change", function(){
     console.log("Switch On: " + switchOn);
 });
 
+//Reminder Method Selection
 $("#dropdownEmail").on("click", function(){
     $("#reminderMethodDropdownButton").html("Email");
     console.log("Email Selected");
@@ -94,6 +99,7 @@ $("#dropdownBrowser").on("click", function(){
     console.log("Browser Selected");
 });
 
+//Theme Selection
 $("#blueThemeDropdownItem").on("click", function(){
     setSelectedTheme("blue");
 });
@@ -105,4 +111,14 @@ $("#orangeThemeDropdownItem").on("click", function(){
 });
 $("#purpleThemeDropdownItem").on("click", function(){
     setSelectedTheme("purple");
+});
+
+//Mood Intensity Slider
+$(".form-range").on("input", function(){
+    console.log("Sliding");
+    let range = $(this);
+    let hint = range.parent(".slider-container").find(".range-hint");
+
+    console.log("Current Value: " + range.val());
+    hint.html(range.val());
 });

@@ -14,11 +14,12 @@
 .edit{
     background: url(../icons/edit.png);
 }
+.close{
+    background: url(../icons/close.png);
+}
 .plus{
     background: url(../icons/plus.png);
 }
-
-/*Tag Icons*/
-.exercise{
-    background: url(../icons/tags/exercise.png);
+.minus{
+    background: url(../icons/minus.png);
 }

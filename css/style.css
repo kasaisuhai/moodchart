@@ -5,6 +5,7 @@ main{
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    padding-top: 16px;
 }
 h1{
     font-size: 36px;
@@ -30,8 +31,9 @@ button{
     transition: 300ms;
 }
 nav{
+    position: fixed;
     float: left;
-    z-index: 100000;
+    z-index: 100;
 }
 nav ul{
     list-style-type: none;
@@ -51,9 +53,10 @@ nav li{
 nav li:hover{
     cursor: pointer;
 }
-.container{
-    margin-top: 16px;
+textarea{
+    resize: none;
 }
+
 .row{
     margin-bottom: 16px;
 }
@@ -62,6 +65,7 @@ nav li:hover{
     width: 48px;
     height: 48px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .emoji{
     display: block;
@@ -72,38 +76,66 @@ nav li:hover{
     display: flex;
     flex-direction: row;
     flex-basis: content;
-    gap: 16px;
+    align-items: center;
+    gap: 5px;
     border-radius: 20px;
     padding: 5px;
+    padding-left: 10px;
 }
 .tag-icon{
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .tag-name{
     margin-right: 5px;
 }
-.mood-ranking{
+.mood-ranking-list{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 16px;
+}
+.mood-ranking{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+}
+.mood-ranking-bar{
+    display: block;
+    width: 48px;
+}
+.graph{
+    display: block;
+    margin: 0 auto;
+    width: 670px;
+    height: 468px;
+    background-size: contain !important;
 }
 .notes{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 16px;
 }
 .note-card{
     display: block;
-    width: 240px;
+    width: 220px;
     border-radius: 5px;
     padding: 16px;
+}
+.note-content{
+    max-height: 240px;
+    overflow-y: scroll;
 }
 .correlation-list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 16px;
 }
 .correlation{
@@ -152,6 +184,25 @@ nav li:hover{
     align-items: end;
     gap: 16px;
 }
+.dropdown-menu{
+    z-index: 101;
+}
+.form-check-input:hover{
+    cursor: pointer;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.mood-input{
+    display: flex;
+    justify-content: space-between;
+}
+.range-hint{
+    text-align: center;
+}
+
 /*Theme Swatches*/
 .theme-swatch{
     display: inline-block;
@@ -219,7 +270,36 @@ nav li:hover{
     background: #F6DDFF;
 }
 
-#profile-picture{
+#homeGraph{
+    display: block;
+    margin: 0 auto;
+}
+#moodRanking1{
+    height: 52px;
+}
+#moodRanking2{
+    height: 48px;
+}
+#moodRanking3{
+    height: 16px;
+}
+#tagInput{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+#sleepTimeSelector{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#submitEntryButton{
+    display: block;
+    float: right;
+}
+#profilePicture{
     display: block;
     margin: 0 auto;
     border-radius: 50px;
@@ -229,11 +309,11 @@ nav li:hover{
 #user{
     text-align: center;
 }
-#join-date{
+#joinDate{
     text-align: center;
 }
 
-@media only screen and (width<640px){
+@media only screen and (width<576px){
     nav{
         float: none;
         bottom: 0;
@@ -266,16 +346,29 @@ nav li:hover{
         order: 3;
     }
 
+    .graph{
+        width: 335px;
+        height: 234px;
+    }
     .notes{
-        flex-wrap: none;
+        flex-wrap: nowrap;
         overflow-x: scroll;
     }
-    .correlation-list{
-        flex-wrap: none;
-        overflow-x: scroll;
+    .note-content{
+        max-height: 190px;
+        overflow-y: scroll;
     }
+    /* .correlation-list{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    } */
     .new-entry{
         position: absolute;
         top: -24px;
+    }
+
+    .modal-content{
+        width: 100%;
+        height: 100%;
     }
 }

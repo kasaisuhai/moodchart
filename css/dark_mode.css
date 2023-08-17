@@ -2,3 +2,50 @@ body{
     color: #F4F4F4;
     background-color: #373737;
 }
+textarea{
+    color: #F4F4F4 !important;
+    background-color: #373737 !important;
+}
+.modal-content{
+    background-color: #373737 !important;
+}
+.dropdown-menu{
+    background-color: #373737 !important;
+}
+.dropdown-item{
+    color: #F4F4F4 !important;
+}
+.graph.this-week{
+    background: url(../images/graph-this-week-dark.png);
+}
+
+/*Main Icons*/
+.home{
+    background: url(../icons/home.png);
+}
+.analytics{
+    background: url(../icons/analytics.png);
+}
+.history{
+    background: url(../icons/history.png);
+}
+.account{
+    background: url(../icons/account.png);
+}
+.edit{
+    background: url(../icons/edit.png);
+}
+.close{
+    background: url(../icons/close.png);
+}
+.plus{
+    background: url(../icons/plus.png);
+}
+.minus{
+    background: url(../icons/minus.png);
+}
+
+/*Tag Icons*/
+.exercise{
+    background: url(../icons/tags/white_running.png);
+}
