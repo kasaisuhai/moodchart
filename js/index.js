@@ -7,7 +7,7 @@ const purpleThemeStyle = "css/theme_purple.css";
 const swatchOrder = ["light", "dark", "accent", "medium", "highlight"];
 
 //Functions
-function initializePage(){
+function initializePage(){ //Initializes data for theme and light/dark mode
     if(localStorage.getItem("Initialized") === null){
         localStorage.setItem("darkChecked", false);
         localStorage.setItem("currentTheme", "blue");
@@ -36,7 +36,7 @@ function initializePage(){
         console.log("Already Initialized");
     }
 }
-function setSelectedTheme(color){
+function setSelectedTheme(color){ //Sets and updates color theme
     console.log("Setting Theme: " + color);
     let themeSwatch = $("#selectedTheme .theme-swatch");
 
@@ -45,10 +45,10 @@ function setSelectedTheme(color){
 
         themeSwatch.eq(i).removeClass();
         themeSwatch.eq(i).addClass("theme-swatch " + newThemeClass);
-        console.log("Swatch: " + newThemeClass)
+        console.log("Swatch: " + newThemeClass);
     }
 
-    switch(color){
+    switch(color){ //Apply theme css
         case "blue":
             $("#themeStyle").attr("href", blueThemeStyle);
             break;
@@ -64,6 +64,42 @@ function setSelectedTheme(color){
     }
 
     localStorage.setItem("currentTheme", color);
+}
+
+function formatTime(time){
+    let hour = parseInt(time.substring(0, time.indexOf(":")));
+    let minute = time.substring(time.indexOf(":") + 1, time.indexOf(":") + 3);
+    let ampm = time.substring(time.length-2);
+    
+    if(ampm==="PM") hour += 12;
+    if(hour < 10) hour = "0" + hour;
+    
+    console.log("Hour: " + hour);
+    console.log("Minute: " + minute);
+    console.log("AMPM: " + ampm);
+    
+    time = hour + ":" + minute;
+    console.log(time);
+    return time;
+}
+
+function unformatTime(time){
+    let hour = parseInt(time.substring(0, time.indexOf(":")));
+    let minute = parseInt(time.substring(time.indexOf(":") + 1, time.indexOf(":") + 3));
+    let ampm;
+
+    if(hour < 12) ampm = "AM";
+    else ampm = "PM";
+
+    if(hour > 12) hour -= 12;
+    if(hour==0) hour = 12;
+
+    if(hour < 10) hour = "0" + hour;
+    if(minute < 10) minute = "0" + minute;
+
+    time = hour + ":" + minute + " " + ampm;
+    console.log("Time: " + time);
+    return time;
 }
 
 //Event Listeners
@@ -130,9 +166,71 @@ $(".form-range").on("input", function(){ //Mood Intensity Slider
 $("#sleepTimeInput").on("input", function(){ //Number Input
     console.log("Number Input");
     let num = $(this).val();
-    let min = 0;
-    let max = 24;
+    let min = $(this).attr("min");
+    let max = $(this).attr("max");
+    console.log("");
 
     if(num < min) $(this).val(min);
     if(num > max) $(this).val(max);
 });
+
+$("input[type=radio]").on("click", function(){ //Analytics Graph Radio Buttons
+    let checked = $(this).attr("id");
+    
+    $("#analyticsGraph").removeClass();
+    $("#analyticsGraph").addClass("graph");
+    
+    switch(checked){
+        case "1M":
+            $("#analyticsGraph").addClass("month-view");
+            break;
+        case "3M":
+            $("#analyticsGraph").addClass("quarterly-view");
+            break;
+        case "6M":
+            $("#analyticsGraph").addClass("half-year-view");
+            break;
+        case "1Y":
+            $("#analyticsGraph").addClass("full-year-view");
+            break;
+    }
+});
+
+$(".edit").on("click", function(){
+    let reminder = $(this).parent();
+    let currentTime = reminder.find(".reminder-time").html();
+    currentTime = formatTime(currentTime);
+
+    console.log("Reminder: " + reminder.attr("class"));
+    console.log("Current Time: " + currentTime);
+
+    $("#reminderModalButton").html("Save Reminder");
+    $("#reminderModalButton").removeClass("create");
+    $("#reminderModalButton").addClass("overwrite");
+    $("#reminderTimeInput").val(currentTime);
+    $("#reminderModalName").html(reminder.parent().find(".reminder-name").html());
+});
+
+$("#newReminderButton").on("click", function(){
+    $("#reminderModalButton").html("Create Reminder");
+    $("#reminderModalButton").addClass("create");
+    $("#reminderModalButton").removeClass("overwrite");
+    $("#reminderTimeInput").val("00:00");
+    $("#reminderModalName").html("Reminder " + $().length());
+});
+
+// $("#reminderModalButton .overwrite").on("click", function(){
+//     let time = $("#reminderTimeInput").val();
+//     time = unformatTime(time);
+
+//     console.log("Reminder Time:" + $("#reminder1Time").html());
+
+//     $("#reminder1Time").html(time);
+//     console.log("Time: " + time);
+// });
+// $("#reminderModalButton").on("click", function(){
+//     let time = $("#reminderTimeInput").val();
+//     time = unformatTime(time);
+
+//     console.log("Time: " + time);
+// });

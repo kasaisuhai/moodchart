@@ -60,6 +60,7 @@ textarea{
 
 .row{
     margin-bottom: 16px;
+    gap: 16px;
 }
 .icon{
     display: block;
@@ -117,6 +118,27 @@ textarea{
     width: 670px;
     height: 468px;
     background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+.month-view{
+    width: 100%;
+    margin-top: 64px;
+    background: url(../images/Graph_1month.png);
+}
+.quarterly-view{
+    width: 100%;
+    margin-top: 64px;
+    background: url(../images/Graph_3month.png);
+}
+.half-year-view{
+    width: 100%;
+    margin-top: 64px;
+    background: url(../images/Graph_6month.png);
+}
+.full-year-view{
+    width: 100%;
+    margin-top: 64px;
+    background: url(../images/Graph_1year.png);
 }
 .notes{
     display: flex;

@@ -26,7 +26,7 @@
                 <li><a class="icon analytics" href="analytics.html"></a></li>
                 <li><a class="icon history" href="history.html"></a></li>
                 <li><a class="icon account" href="account.html"></a></li>
-                <li><button class="new-entry"><div class="icon plus"></div></button></li>
+                <li><button class="new-entry" data-bs-toggle="modal" data-bs-target="#moodEntryModal"><div class="icon plus"></div></button></li>
             </ul>
         </nav>
 
@@ -36,18 +36,16 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <h1>Analytics</h1>
                         <div class="btn-group form-check" role="group" style="float: right">
-                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                            <label class="btn btn-primary shadow-none" for="option1">1M</label>
-                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                            <label class="btn btn-primary shadow-none" for="option2">3M</label>
-                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                            <label class="btn btn-primary shadow-none" for="option3">6M</label>
-                            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                            <label class="btn btn-primary shadow-none" for="option4">1Y</label>
+                            <input type="radio" class="btn-check" name="options" id="1M" autocomplete="off" checked>
+                            <label class="btn btn-primary shadow-none" for="1M">1M</label>
+                            <input type="radio" class="btn-check" name="options" id="3M" autocomplete="off">
+                            <label class="btn btn-primary shadow-none" for="3M">3M</label>
+                            <input type="radio" class="btn-check" name="options" id="6M" autocomplete="off">
+                            <label class="btn btn-primary shadow-none" for="6M">6M</label>
+                            <input type="radio" class="btn-check" name="options" id="1Y" autocomplete="off">
+                            <label class="btn btn-primary shadow-none" for="1Y">1Y</label>
                         </div>
-                        <div class="graph month-view">
-                            
-                        </div>
+                        <div class="graph month-view" id="analyticsGraph"></div>
                     </div>
                 </div>
                 <div clas="row">

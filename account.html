@@ -26,7 +26,7 @@
                 <li><a class="icon analytics" href="analytics.html"></a></li>
                 <li><a class="icon history" href="history.html"></a></li>
                 <li><a class="icon account" href="account.html"></a></li>
-                <li><button class="new-entry"><div class="icon plus"></div></button></li>
+                <li><button class="new-entry" data-bs-toggle="modal" data-bs-target="#moodEntryModal"><div class="icon plus"></div></button></li>
             </ul>
         </nav>
 
@@ -59,13 +59,13 @@
                             <p>Scheduled Reminders</p>
                         </div>
                         <div class="setting">
-                            <p>Morning</p>
+                            <p class="reminder-name">Reminder 1</p>
                             <div class="scheduled-reminder">
-                                <p>7:30 AM</p>
-                                <span class="icon edit"></span>
+                                <p class="reminder-time" id="reminder1Time">7:30 AM</p>
+                                <span class="icon edit" data-bs-toggle="modal" data-bs-target="#reminderModal"></span>
                             </div>
                         </div>
-                        <button>Create Reminder</button>
+                        <button id="newReminderButton" data-bs-toggle="modal" data-bs-target="#reminderModal">New Reminder</button>
                     </div>
                 </div>
                 <div class="row">
@@ -142,7 +142,7 @@
             </div>
         </main>
 
-        <!--Modal Window-->
+        <!--Mood Entry Modal Window-->
         <div id="moodEntryModal" class="modal" tabindex="-1">
             <div class="modal-dialog modal-fullscreen-sm-down">
               <div class="modal-content">
@@ -234,6 +234,23 @@
                     <button id="submitEntryButton" data-bs-dismiss="modal">Submit Entry</button>
                 </div>
               </div>
+            </div>
+        </div>
+
+        <!--Reminder Modal Window-->
+        <div id="reminderModal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Reminder</h3>
+                        <div class="icon close" data-bs-dismiss="modal"></div>
+                    </div>
+                    <div class="modal-body">
+                        <p id="reminderModalName">Reminder 1</p>
+                        <input type="time" id="reminderTimeInput" value="12:00 AM">
+                        <button id="reminderModalButton" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
             </div>
         </div>
 
