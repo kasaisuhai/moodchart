@@ -216,7 +216,7 @@ $("#newReminderButton").on("click", function(){
     $("#reminderModalButton").addClass("create");
     $("#reminderModalButton").removeClass("overwrite");
     $("#reminderTimeInput").val("00:00");
-    $("#reminderModalName").html("Reminder " + $().length());
+    $("#reminderModalName").html("Reminder 2");
 });
 
 // $("#reminderModalButton .overwrite").on("click", function(){
