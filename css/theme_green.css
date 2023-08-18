@@ -1,21 +1,80 @@
 button{
-    background: #b0c66b;
+  background: #7E933E;
+  color: #F4F4F4;
 }
 button:hover{
-    background: #b0c66b;
-    stroke: 1px #424b26;
+  background: #B0C66B;
 }
 nav{
-    background-color: #424b26;
+  background-color: #424B26;
 }
 nav li:hover{
-    color: white;
+  color: #F4F4F4;
 }
 .tag{
-    background: #424b26;
-    color: white;
+  background: #424B26;
+  color: #F4F4F4;
+}
+.tag:hover{
+  background: #B0C66B;
+}
+.tag.active{
+  background: #7E933E;
+  border: 1px solid #F4F4F4;
+}
+.tag.active:hover{
+  background: #B0C66B;
+}
+.tag.disabled{
+  background: #424B26;
+  color: #F4F4F4;
+}
+.tag.disabled:hover{
+  background: #424B26;
+  cursor: default;
+}
+.mood-ranking-bar{
+  background: #7E933E;
 }
 .note-card{
-    background: #7e933e;
-    color: white;
+  background: #7E933E;
+}
+.past-entry{
+  background: #7E933E;
+}
+.btn-primary{
+  background: #7E933E;
+  color: #F4F4F4;
+  border-color: #424B26;
+}
+.btn-primary:hover{
+  background: #B0C66B;
+  border-color: #424B26;
+}
+.btn-check:checked+.btn-primary{
+  background: #7E933E !important;
+  border-color: #B0C66B !important;
+}
+.btn-primary:not(:disabled):active{
+  background: #DEEEAC !important;
+}
+.custom-range::-webkit-slider-thumb{
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -7px; /* Centers thumb on the track */
+  background-color: #7E933E;
+  outline: #F4F4F4;
+  height: 1.5rem;
+  width: 0.5rem;
+}
+.custom-range::-webkit-slider-thumb:active{
+  background-color: #B0C66B;
+}
+.form-check-input:checked{
+  background-color: #7E933E;
+  border-color: #7E933E;
+}
+.form-check-input:focus {
+  border-color: #7E933E;
+  box-shadow: 0 0 0 0.25rem rgba(81, 117, 160, .25);
 }
