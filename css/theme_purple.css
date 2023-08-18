@@ -1,5 +1,6 @@
 button {
-  background: #e7adfc;
+  background: #9b5cb1;
+  color: #f4f4f4;
 }
 button:hover {
   background: #e7adfc;
@@ -9,15 +10,72 @@ nav {
   background-color: #653277;
 }
 nav li:hover {
-  color: white;
+  color: #f4f4f4;
 }
 .tag {
   background: #653277;
-  color: white;
+  color: #f4f4f4;
+}
+.tag:hover {
+  background: #e7adfc;
+}
+.tag.active {
+  background: #9b5cb1;
+  border: 1px solid #f4f4f4;
+}
+.tag.active:hover {
+  background: #e7adfc;
+}
+.tag.disabled {
+  background: #653277;
+  color: #f4f4f4;
+}
+.tag.disabled:hover {
+  background: #653277;
+  cursor: default;
+}
+.mood-ranking-bar {
+  background: #9b5cb1;
 }
 .note-card {
   background: #9b5cb1;
 }
 .past-entry {
-  background: #f6ddff;
+  background: #9b5cb1;
+}
+.btn-primary {
+  background: #9b5cb1;
+  color: #f4f4f4;
+  border-color: #653277;
+}
+.btn-primary:hover {
+  background: #e7adfc;
+  border-color: #653277;
+}
+.btn-check:checked + .btn-primary {
+  background: #9b5cb1 !important;
+  border-color: #e7adfc !important;
+}
+.btn-primary:not(:disabled):active {
+  background: #f6ddff !important;
+}
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -7px; /* Centers thumb on the track */
+  background-color: #9b5cb1;
+  outline: #f4f4f4;
+  height: 1.5rem;
+  width: 0.5rem;
+}
+.custom-range::-webkit-slider-thumb:active {
+  background-color: #e7adfc;
+}
+.form-check-input:checked {
+  background-color: #9b5cb1;
+  border-color: #9b5cb1;
+}
+.form-check-input:focus {
+  border-color: #9b5cb1;
+  box-shadow: 0 0 0 0.25rem rgba(81, 117, 160, 0.25);
 }
