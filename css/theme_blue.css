@@ -17,7 +17,6 @@ nav li:hover{
 }
 .tag:hover{
   background: #83A4CB;
-  cursor: pointer;
 }
 .tag.active{
   background: #5175a0;

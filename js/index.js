@@ -126,3 +126,13 @@ $(".form-range").on("input", function(){ //Mood Intensity Slider
     console.log("Current Value: " + range.val());
     hint.html(range.val());
 });
+
+$("#sleepTimeInput").on("input", function(){ //Number Input
+    console.log("Number Input");
+    let num = $(this).val();
+    let min = 0;
+    let max = 24;
+
+    if(num < min) $(this).val(min);
+    if(num > max) $(this).val(max);
+});

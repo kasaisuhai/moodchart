@@ -2,6 +2,39 @@ body{
     color: #373737;
     background-color: #F4F4F4;
 }
+textarea{
+    background-color: #F4F4F4 !important;
+    color: #373737 !important;
+}
+input[type=number] {
+    background-color: #F4F4F4 !important;
+    color: #373737 !important;
+}
+.modal-content{
+    color: #373737 !important;
+    background-color: #F4F4F4 !important;
+}
+.dropdown-menu{
+    background-color: #373737 !important;
+}
+.dropdown-item{
+    color: #F4F4F4 !important;
+}
+.graph.this-week{
+    background: url(../images/graph-this-week-light.png);
+}
+.graph.month-view{
+    
+}
+.graph.3months-view{
+
+}
+.graph.6months-view{
+
+}
+.graph.year-view{
+
+}
 
 /*Main Icons*/
 .home{
@@ -17,14 +50,14 @@ body{
     background: url(../icons/account.png);
 }
 .edit{
-    background: url(../icons/edit.png);
+    background: url(../icons/black_edit.png);
 }
 .close{
-    background: url(../icons/close.png);
+    background: url(../icons/black_close.png);
 }
 .plus{
     background: url(../icons/plus.png);
 }
 .minus{
-    background: url(../icons/minus.png);
+    background: url(../icons/black_minus.png);
 }

@@ -6,6 +6,10 @@ textarea{
     color: #F4F4F4 !important;
     background-color: #373737 !important;
 }
+input[type=number] {
+    color: #F4F4F4 !important;
+    background-color: #373737 !important;
+}
 .modal-content{
     background-color: #373737 !important;
 }
@@ -43,9 +47,4 @@ textarea{
 }
 .minus{
     background: url(../icons/minus.png);
-}
-
-/*Tag Icons*/
-.exercise{
-    background: url(../icons/tags/white_running.png);
 }

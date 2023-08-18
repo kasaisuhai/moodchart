@@ -137,40 +137,42 @@
                         <p>Tags</p>
                         <div id="tagInput">
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
+                                <div class="tag-icon running"></div>
                                 <div class="tag-name">Exercise</div>
                             </div>
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
-                                <div class="tag-name">Exercise</div>
+                                <div class="tag-icon dating"></div>
+                                <div class="tag-name">Date</div>
                             </div>
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
-                                <div class="tag-name">Exercise</div>
+                                <div class="tag-icon gaming"></div>
+                                <div class="tag-name">Gaming</div>
                             </div>
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
-                                <div class="tag-name">Exercise</div>
+                                <div class="tag-icon food"></div>
+                                <div class="tag-name">Food</div>
                             </div>
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
-                                <div class="tag-name">Exercise</div>
+                                <div class="tag-icon book"></div>
+                                <div class="tag-name">Reading</div>
                             </div>
                             <div class="tag">
-                                <div class="tag-icon exercise"></div>
-                                <div class="tag-name">Exercise</div>
+                                <div class="tag-icon school"></div>
+                                <div class="tag-name">School</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon family"></div>
+                                <div class="tag-name">Family</div>
+                            </div>
+                            <div class="tag">
+                                <div class="tag-icon friends"></div>
+                                <div class="tag-name">Friends</div>
                             </div>
                         </div>
                     </div>
                     <div id="sleepTime">
                         <p>Sleep Time</p>
-                        <!-- <div id="sleepTimeSelector">
-                                <div class="icon minus"></div>
-                                <div id="sleepTimeInput"><h3>0</h3></div>
-                                <div class="icon plus"></div>
-                            </div> 
-                        </div>-->
-                        <input id="sleepTimeInput" type="number" min="0" max="24" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+                        <input class="form-control" id="sleepTimeInput" type="number" min="0" max="24" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
                     </div>
                     <div id="noteInput">
                         <div class="form-floating">
@@ -178,7 +180,7 @@
                             <label for="notesTextArea">Notes</label>
                         </div>
                     </div>
-                    <button id="submitEntryButton">Submit Entry</button>
+                    <button id="submitEntryButton" data-bs-dismiss="modal">Submit Entry</button>
                 </div>
               </div>
             </div>
